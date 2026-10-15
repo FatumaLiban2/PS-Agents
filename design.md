@@ -1,6 +1,7 @@
-## Question 1: Designing the Self-Driving Trailer Agent
+                
+Question 1: Designing the Self-Driving Trailer Agent
 
-### 1.1 Introduction
+1.1 Introduction
 
 A self-driving trailer can be described as an intelligent agent that operates within Kenya's highway network. Its main objective is to travel from Nairobi, which is the initial state, to Kisumu, which is the goal state. To achieve this objective, the agent must identify possible routes, collect information about its surroundings, select suitable actions and respond to changes in road conditions.
 
@@ -110,3 +111,53 @@ The PEAS framework provides a way to describe the task of the self-driving trail
 
 The trailer's real-world environment is partially observable, stochastic, sequential, dynamic and mainly continuous. These characteristics show why the agent must do more than follow a fixed route. It must plan its journey from Nairobi to Kisumu, monitor changing conditions and adjust its actions to reach the destination safely and efficiently.
 
+Question 3:
+--------------------------------------------------------------------
+Road Path                         Distance (km)     Average Distance
+--------------------------------------------------------------------
+Nairobi -> Naivasha                 88-91               89.5
+Naivasha -> Nakuru                  71                  71          
+Nakuru -> Eldoret                   156                 156
+Eldoret -> Kitale                   70-72               71
+Kitale -> Kakamega                  110                 110
+Kakamega -> Kisumu                  49-51               50
+Nakuru -> Kericho                   107                 107
+Kericho -> Sondu                    45                  45
+Sondu -> Kisumu                     52.6                52.6
+Nairobi -> Narok                    141-142             141.5
+Narok -> Bomet                      81-82               81.5
+Bomet -> Kericho                    72.5-76             74.25
+Kericho -> Kisii                    87.2                87.2
+Kisii -> Sondu                      61-61.6             61.3
+Nairobi -> Thika                    43-45               44
+Thika -> Nyeri                      105-115             110
+Nyeri -> Nyahururu                  104                 104
+Nyahururu -> Nakuru                 63-65               64   
+
+Route A
+Nairobi -> Naivasha -> Nakuru -> Eldoret -> Kitale -> Kakamega -> Kisumu
+89.5 + 71 + 156 + 71 + 110 + 50 = 547.5
+
+Route B
+Nairobi -> Naivasha -> Nakuru -> Kericho -> Sondu -> Kisumu
+89.5 + 71 + 107 + 45 + 52.6 = 365.1
+
+Route C
+Nairobi -> Narok -> Bomet -> Kericho -> Sondu -> Kisumu
+141.5 + 81.5 + 74.25 + 45 + 52.6 = 394.85
+
+Route D
+Nairobi -> Narok -> Bomet -> Kericho -> Kisii -> Sondu -> Kisumu
+141.5 + 81.5 + 74.25 + 87.2 + 61.3 + 52.6 = 498.35
+
+Route E
+Nairobi -> Thika -> Nyeri -> Nyahururu -> Nakuru -> Kericho -> Sondu -> Kisumu
+44 + 110 + 104 + 64 + 107 + 45 + 52.6 = 526.6
+
+Route F
+Nairobi -> Thika -> Nyeri -> Nyahururu -> Nakuru -> Kericho -> Kisii -> Sondu -> Kisumu
+44 + 110 + 104 + 64 + 107 + 87.2 + 61.3 + 52.6 = 630.1
+
+Optimal path the trailer can make is Route B: 
+Nairobi -> Naivasha -> Nakuru -> Kericho -> Sondu -> Kisumu
+which is approximately 365.1 km when distance is used as the path cost function.

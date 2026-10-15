@@ -1,5 +1,3 @@
-                
-Question 1: Designing the Self-Driving Trailer Agent
 
 1.1 Introduction
 
@@ -110,6 +108,39 @@ This distinction is important because the agent may use a discrete graph to comp
 The PEAS framework provides a way to describe the task of the self-driving trailer by identifying its performance measures, environment, actuators and sensors. The performance measures guide the agent towards safe and efficient driving, while its sensors and actuators allow it to observe and interact with the environment.
 
 The trailer's real-world environment is partially observable, stochastic, sequential, dynamic and mainly continuous. These characteristics show why the agent must do more than follow a fixed route. It must plan its journey from Nairobi to Kisumu, monitor changing conditions and adjust its actions to reach the destination safely and efficiently.
+
+
+
+
+### Question 2: Directed Graph and Search Tree
+To solve and represent the environment and routing problem from Nairobi to Kisumu, we use the Directed Graph and a Search Tree.
+
+1. Directed Graph (State Space)
+The Directed Graph represents the physical road network and all possible legal actions such as driving.
+It consists of:
+Nodes: These are the major towns (Nairobi, Naivasha, Nakuru, etc.).
+
+Edges : Directed roads connecting the towns.
+
+![Directed Graph of Highway Network](image.png)
+
+2. Search Tree
+The Search Tree represents how the agent explores the state space starting from the initial state (Nairobi) to find the goal state (Kisumu). It shows the different paths the agent is considering.
+
+Root Node: Nairobi
+
+Branches: possible routes the agent might consider (Northern, Central, Southern, and Eastern).
+
+![Directed Graph of Highway Network](image-1.png)
+
+3. Abstraction
+Abstraction involves leaving out irrelevant information to reduce the complexity of the problem.
+
+In this specific scenario, abstraction was applied as follows:
+
+Ignoring Minor Towns: Minor towns and villages along the routes are omitted. The agent only considers major towns (nodes) as the distance markers.
+                
+Question 1: Designing the Self-Driving Trailer Agent
 
 Question 3:
 --------------------------------------------------------------------

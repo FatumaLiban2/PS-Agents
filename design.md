@@ -140,9 +140,8 @@ In this specific scenario, abstraction was applied as follows:
 
 Ignoring Minor Towns: Minor towns and villages along the routes are omitted. The agent only considers major towns (nodes) as the distance markers.
                 
-Question 1: Designing the Self-Driving Trailer Agent
 
-Question 3:
+### Question 3:
 --------------------------------------------------------------------
 Road Path                         Distance (km)     Average Distance
 --------------------------------------------------------------------
